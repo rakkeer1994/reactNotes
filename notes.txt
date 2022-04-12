@@ -75,6 +75,27 @@ the create-react-app is a tool/boilerplate that allow us to create quickly and r
 it is a easiest way for creating react application
 while creating cra it provide a default setup which includes module bundler(webpack) and babel and other required module also
 
+React Props:
+We know that the react is all about the component and that all component are connected to each others like in parent-child / sibling relations
+but if we want to communicate/pass data with each other then how it is passed then there is props comes into picture
+so props are used to pass data from parent component to child component
+Props 
+Props are arguments passed into React components.
+Props stand for "Properties." They are read-only components. It is an object which stores the value of attributes of a tag 
+and work similar to the HTML attributes
+Props are passed to components via HTML attributes.
+props stands for properties.
+React Props are like function arguments in JavaScript and attributes in HTML.
+
+React State:
+The state is an updatable structure that is used to contain data or information about the component. 
+The state in a component can change over time. The change in state over time can happen as a response to user
+ action or system event. A component with the state is known as stateful components. 
+ It is the heart of the react component which determines the behavior of the component and how it will render. 
+ They are also responsible for making a component dynamic and interactive
+It can be update by using the setState() method.
+
+
 LifeCycle phases and Methods>
 Each component in react has a lifcycle which we can monitor and manipulate during its all phases.
 basically it has three lifcycle phases:
