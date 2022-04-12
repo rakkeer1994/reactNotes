@@ -1,9 +1,21 @@
-react featurs
+Why react is opted:
+React has numerous features like
+if we compare based on users like how many users using react and angular
+so react acount is very high since last 3-4 years and job is providing by react is very high
+bcz of that i opted but job is not only reason behind it the developrs should look forward too
+The biggest feature for new developrs is easy learning curve
+Another reason is that we dont take care about separate html js file bcs react is provided
+jsx means we can code html and js together
+
+
+react featurs:
 1) Single Page Application
 2) Use JSX
 3) Virtual dom
 4) One way data binding
 5) Easy learning curve
+6) GreAT Comunity supported
+7) Reusable component
 
 Single Page Application: React is based on single page application concept
 single page application means in normal web application in which we are clicking on any button
@@ -30,11 +42,70 @@ complete procedure known as "diffing algorithm"
 Now the new changes will be updated in our real dom this process is known as "Reconciliation"
 So manupulating virtual dom is much faster 
 
-JSX: react use JSX(JavaScript Syntax Extension) JSX is a combination of HTML and JavaScript. We can embed JavaScript objects inside the HTML elements.But JSX is not supported by the browsers, as a result Babel compiler transcompile the code into JavaScript code. JSX makes codes easy and understandable. It is easy to learn if we know HTML and JavaScript.
+JSX: react use JSX(JavaScript Syntax Extension) JSX is a combination of HTML and JavaScript. 
+We can embed JavaScript objects inside the HTML elements.But JSX is not supported by the browsers,
+ as a result Babel compiler transcompile the code into JavaScript code. JSX makes codes easy and understandable. 
+ It is easy to learn if we know HTML and JavaScript.
 
-One Way data binding: a special feature is One-way Data Binding:Follows Unidirectional data flow or data binding.The data in react flows only in one direction i.e. the data is transferred from top to bottom i.e. from parent components to child components. The properties(props) in the child component cannot return the data to its parent component but it can have communication with the parent components to modify the states according to the provided inputs. This is the working process of one-way data binding. This keeps everything modular and fast.
+One Way data binding: a special feature is One-way Data Binding:Follows Unidirectional data flow or data binding.The data in react flows only in one direction 
+i.e. the data is transferred from top to bottom i.e. from parent components to child components. The properties(props) in the child component cannot return 
+the data to its parent component but it can have communication with the parent components to modify the states according to the provided inputs.
+This is the working process of one-way data binding. This keeps everything modular and fast.
 
+Easy Learning curve: How we can say that easy learning curve it is suppose to say that when thestudent are in college then the students aware about
+html css and js bcz these are very basic technology so whenever anyone want to work with react then the guy start working with react
+bcz we dont need to learn anything extra sowe can jump directly on react
 
 
 Library v/s Framwork:
-Library vs Framework? Library: -is a collection of functions -In case of library the Execution of code will be decided by the developers Means developers are in charge of the flow of the whole application. -We are choosing when and where to call the library. -in case of library its developers duty to design the structure. -library follows View model Framework: -Framework is a collection of multiple other libraries. -in case of framework the execution is already defined or decided.the framework is in charge of the flow of the whole application. -It provides some places for we have to plug in our code, but it calls the code you plugged in as needed. -Framework provides you a structure in which we just put down the code our functionality. -it follows MVC structure (model view controller)
+Library vs Framework? Library: -is a collection of functions -In case of library the Execution of code will be decided by the developers Means developers are in charge of the flow of the whole application. 
+-We are choosing when and where to call the library. -in case of library its developers duty to design the structure. -library follows View model Framework: -Framework is a collection of multiple other libraries. 
+-in case of framework the execution is already defined or decided.
+the framework is in charge of the flow of the whole application. 
+-It provides some places for we have to plug in our code, but it calls the code you plugged in as needed. -Framework provides you a structure in which we just put down the code our functionality. -it follows MVC structure (model view controller)
+
+Named and Default export:
+whenever we want to multiple export inside single file then we use named export bcz default export allow only one export inside any file
+if we want named export then just put export keyword before any function/object/class component.
+while importing in case of named export we enclose inside curly braces bcs we can import multiple variable form single file
+but in case of default export we donot need to enclos inside curly brace while importing bcs it is only one export
+
+What is CRA:
+the create-react-app is a tool/boilerplate that allow us to create quickly and run our application quickly without any config
+it is a easiest way for creating react application
+while creating cra it provide a default setup which includes module bundler(webpack) and babel and other required module also
+
+LifeCycle phases and Methods>
+Each component in react has a lifcycle which we can monitor and manipulate during its all phases.
+basically it has three lifcycle phases:
+1)Mounting
+2)Updating
+3)Unmounting
+
+Mounting: In mounting phase we create the instance of component or putting
+elements into the DOM.
+
+Updating: This is the next phase of lifecycle in which the component being updated.
+A component is updateed whenever there is any change in the components state/props.
+
+Unmounting: this is the next phase in the lifecycle in this lifecycle when a componentis removed or instance of component is destroyed
+
+all the phase have their lifecycle Methods ans gets called
+1)Mounting
+ 1)Constructor():this method is called before anything else when the component is initiated
+ 2)getDerivedStateFromProps(): this method is called right before renderong the element in the dom
+ 3)render(): it is the only require method and will always be called and others all are optional 
+ 4)ComponentDidMount(): This method is called after the component is rendered
+
+2)Updating phase
+  1)getDerivestateFromProps(): This is the first method that is called when a component gets updates.
+  2)shouldComponentUpdate(): in this method we can return a boolean value that specifies whether react should continue with the rendering or not 
+    the default value of this method is true.
+  3)Render(): this method is called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes.
+  4)getSnapshotBeforeUpdate(): this method we have access to the props and state before the any update, meaning that even after the update, we can check what the values were before the update.
+              means this method can give previous props and state.
+  5)componentDidUpdate(): The componentDidUpdate method is called after the component is updated in the DOM.
+
+3)Unmounting Phase
+  it has only one method that gets called when component gets Unmounting
+  componentWillUnmount(): This method is called when the component is about to be removed from the DOM.
