@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 Why react is opted:
 React has numerous features like
 if we compare based on users like how many users using react and angular
@@ -176,3 +184,139 @@ useEffect hook
 // useReducer: it takes two arguments, state and reducer function
 // this reducer function will be responsible to update the state variable.
 // this reducer function takes two parameters state and action
+
+
+
+
+
+************************************************************js interview questions************************************************************
+
+diff b/w ==, === ::
+these are the comparision operators and always return a boolean values like true/false.
+== it compares only value of any variables
+=== it compares valueas well as data type of variables
+if we wantto find out data type of any variable then we use typeof operator
+
+spread operator::
+spread operator looks like thee dots ...
+it is used to destructure the iterable elements like objects and arrys
+it actually unpack/spread the values
+so for ex ifwe want to create an obj whose value should be same as another obj thenwe use 
+spread operator
+let obj1={id:1,name:"rakesh"}
+let obj2={...obj1, add:"ratlam"}
+
+
+diff b/w var,let&const::
+these are 3 diff ways of creating or declaring the variables in js
+out of these 3 var used to be a part of es5/ECMAScript2014 & let and const are the part 
+of latest release of js version ie ES6.
+diff are:
+var is global scope variable 
+let and const are block scope
+at the time of memory allocation they will get their memry also at different location
+means var will be in global and let&const will be in script scope accoring to browser
+if we will try to access var keyword variable before initialization we wil get undefined
+but if we will try to aceess variable created using let/const it will through a refrence err
+
+
+
+************************************************************Node JS interview questions************************************************************
+************************************************************Node JS interview questions************************************************************
+What is NPM?
+NPM stands for Node Package Manager, responsible for managing all the packages and modules for Node.js.
+Node Package Manager provides two main functionalities:
+
+Provides online repositories for node.js packages/modules, which are searchable on search.nodejs.org
+Provides command-line utility to install Node.js packages and also manages Node.js versions and dependencies
+
+
+
+What are the modules in Node.js?
+Modules are like JavaScript libraries that can be used in a Node.js application to include a set of functions. 
+To include a module in a Node.js application, use the require() function with the parentheses containing the module's name.
+In Node.js, Modules are the blocks of encapsulated code that communicates with an external application on the basis of their related functionality.
+ Modules can be a single file or a collection of multiples files/folders. The reason programmers are heavily reliant on modules is because of their 
+re-usability as well as the ability to break down a complex piece of code into manageable chunks
+Node.js has many modules to provide the basic functionality needed for a web application. Some of them like:
+Core Modules
+local Modules
+Third-party Modules
+
+Core Modules: Node.js has many built-in modules that are part of the platform and comes with Node.js installation.
+These modules can be loaded into the program by using the require function.
+var module = require('module_name');
+ex are
+http module:	creates an HTTP server in Node.js.
+path module:	includes methods to deal with file paths.
+
+
+Local Modules: Unlike built-in and external modules, local modules are created locally in our Node.js application. 
+Let’s create a simple calculating module that calculates various operations. Create a calc.js file that has the following code:
+exports.add = function (x, y) { 
+    return x + y; 
+}; 
+
+it is used in index.js file
+var calculator = require('./calc');
+var x = 50, y = 10; 
+    
+console.log("Addition of 50 and 10 is "
+                   + calculator.add(x, y)); 
+
+Third-party modules: Third-party modules are modules that are available online using the Node Package Manager(NPM). 
+These modules can be installed in the project folder or globally. Some of the popular third-party modules are mongoose, express, angular, and react.
+ex are
+npm install express
+npm install mongoose
+
+
+
+what is module.exports?
+The module.exports is actually a property of the module object in node.js. module. Exports is the object that is returned to the require() call.
+By module.exports, we can export functions, objects, and their references from one file and can use them in other files by importing them by require() method.
+Purpose:
+The main purpose of module.exports is to achieve modular programming. Modular programming refers to separating the functionality of a program into independent,
+ interchangeable modules, such that each contains everything necessary to execute only one aspect of the desired functionality.
+ By not using module.exports it becomes difficult to write a large program without modular/reusable code.
+
+Using module.exports we can separate business logic from other modules.
+
+By Using it becomes easy to maintain and manage the code base in different modules.
+
+
+
+diff types of http request?
+GET: GET method is used to establish connections and receive info from the server. It is used while making API calls, where no modification of data is involved.
+
+POST: The POST method is generally used to send data inside the entity-body section. Authentication, File Uploads, etc. are all done via POST method requests.
+
+DELETE: This method is used to delete resources on the server.
+
+PUT: This method is used to replace existing resources on the server with the updated resources.
+HEAD: Functions similarly to GET, but sends the message request without the entity-body. 
+This is used in cases when the server must not return the message-body in the response. Or in cases when the files being accessed are too large to be transmitted.
+url:  https://www.geeksforgeeks.org/difference-between-http-get-and-post-methods/
+
+
+CORS?
+Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) 
+other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to 
+the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that
+ indicate the HTTP method and headers that will be used in the actual request.
+The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers.
+An example of a cross-origin request: the front-end JavaScript code served from https://domain-a.com uses XMLHttpRequest to make a request for https://domain-b.com/data.json.
+
+For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, XMLHttpRequest and the Fetch API follow the same-origin policy. 
+This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.
+
+what is nodejs?
+
+Node.js is an open-source and cross-platform runtime environment built on Chrome’s V8 JavaScript engine for executing JavaScript code outside of a browser
+Node.js is an open-source backend javascript runtime environment. It is a used as backend service where javascript works on the server-side of the application.
+ This way javascript is used on both frontend and backend.
+
+What Is Express JS?     
+Express is a node js web application framework that provides broad features for building web and mobile applications.
+It is used to build a single page, multipage, and hybrid web application.
+It's a layer built on the top of the Node js that helps manage servers and routes.
