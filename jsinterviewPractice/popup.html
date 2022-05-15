@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.cont{
+    width: 100%;
+    height: 100vh;
+    border: 1px solid red;
+}
+
+.pop{
+    width: 20%;
+    height: 20vh;
+    background-color: grey;
+    display: none;
+}
+
+.show1{
+display: block;
+width: 20%;
+    height: 20vh;
+    background-color: grey;
+    position: absolute;
+     top: 400px;
+     left: 400px;
+    z-index: 99;
+}
+.blur1{
+    filter: blur(5px);
+}
+
+.ad-div{
+    width: 50px;
+    height: 40px;
+    border: 1px solid red;
+}
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div id="blur" class="blur">
+         <h1>popup body</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <hr>
+        <div class="inside">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        </div>
+
+        <button class="show" onclick="show()">show popup</button>
+        <div id="form" class="pop">
+            <p id="cross" onclick="remove()">&times;</p>
+            <label for="">enter name:</label>
+            <input type="text" id="inp">
+            <button id="close" onclick="addEle()">add list</button>
+        </div>
+
+        <div id="addcont"></div>
+    </div>
+    <script>
+        var form = document.getElementById('form');
+        var blur =document.getElementById("blur");
+        var addcont = document.getElementById("addcont");
+        var inp = document.getElementById("inp");
+function show(){
+    form.classList.add("show1");
+    blur.classList.add("blur1");
+    console.log("hello");
+}
+function remove(){
+    form.classList.remove("show1");
+    blur.classList.remove("blur1");
+}
+function addEle(){
+    var add_div = document.createElement("div");
+    add_div.classList.add("ad-div");
+    addcont.appendChild(add_div);
+    var ptag = document.createElement("p");
+    add_div.appendChild(ptag);
+    ptag.innerText=inp.value;
+}
+    </script>
+</body>
+</html>

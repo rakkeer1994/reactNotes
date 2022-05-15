@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    promise.all accept a list of promises and return a new promise
+    it resolves when every input promises has resolved
+    if any one of the promise is rejected then it rejected
+
+    promis.all is useful when we want to aggregate result when multiple asynchronous 
+
+   <script>
+
+let pro1 = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        console.log("promise 1st has resolved");
+        resolve(10);
+    }, 1000);
+})
+
+let pro2 = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        console.log("promise 2nd has resolved");
+        resolve(20);
+    }, 2000);
+})
+
+let pro3 = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+console.log("promiseee 3rd hasbeen resolved");
+resolve(30);
+    }, 3000);
+})
+
+Promise.all([pro1, pro2, pro3]).then((res)=>{
+    console.log(res);
+    let total = res.reduce((a,b)=> a+b);
+    console.log("all promise has resolved");
+    console.log(total);
+});
+   </script> 
+</body>
+</html>

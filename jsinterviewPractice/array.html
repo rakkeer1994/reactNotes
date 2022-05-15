@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+The join() method also joins all array elements into a string.
+
+It behaves just like toString(), but in addition you can specify the separator:
+The splice() method adds new items to an array.
+
+The slice() method slices out a piece of an array.
+The first parameter (2) defines the position where new elements should be added (spliced in).
+
+The second parameter (0) defines how many elements should be removed.
+
+The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+The splice() method returns an array with the deleted items:
+
+<script>
+    const arr1 = ["zomato", "uber", "swiggy"];
+    const new_arr1 = arr1.splice(2,0,"amazon", "flipkart");
+    console.log(arr1);
+    const arr2 = ["zomato", "uber", "swiggy", "pizza"];
+    const new_arr2 = arr2.splice(0,2,"amazon", "flipkart");
+    console.log(arr2);
+</script>
+</body>
+</html>

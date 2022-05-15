@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: blue;
+            /* animation-name: rakesh ; */
+            margin: 10px;
+        }
+
+        #one{
+            /* animation: rakesh 2s ease-in-out 2s infinite backwards ; */
+            position: absolute;
+            transform: rotate(360deg);
+            transform: scaleX(3.5);
+        }
+
+        #two{
+            transition: red 2s linear 2s;
+            position: absolute;
+            left: 500px;
+            
+        }
+        #two:hover{
+            background-color: greenyellow;
+            width: 150px;
+            /* border-radius: 50%; */
+            transform: rotate(60deg);
+            transform: scaleX(3.5);
+        }
+        @keyframes rakesh{
+            from{
+                top: 0;
+                left: 0;
+
+            }
+
+            to{
+                top: 400px;
+                left: 450px;
+                border-radius: 50%;
+            }
+        }
+        button{
+            width: 80px;
+            height: 50px;
+            background-color: green;
+        }
+
+        button:hover{
+            background-color: blue;
+            border-radius: 20px;
+            font-size: 2rem;
+            transform: scale(2.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="div1" id="one"></div>
+    <div class="div1" id="two"></div>
+    <div class="div1" id="three"></div>
+    <div class="div1" id="four"></div>
+
+    <center><button>click me</button></center>
+</body>
+</html>

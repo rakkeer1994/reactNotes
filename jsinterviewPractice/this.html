@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 'use strict'
+        // if this alone then it refers to global object/window object 
+        // let thisword = this;
+        // console.log(thisword);
+
+// if this keyword inside the function then it also refers to global/window object 
+        // function abc(){
+        //     console.log(this);
+        // }
+        // abc();
+
+        // if this keyword inside the and it in strict mode then it will give undefined 
+console.log(this);
+        const person = {
+            fname: "rakesh",
+            lname: "keer",
+            greet: function (){
+                console.log(this.fname + " "+ this.lname);
+            }
+        }
+        person.greet();
+
+        function one(){
+            var name = "kabab";
+            console.log(this.name);
+            console.log(this);
+        }
+        one();
+    </script>
+</body>
+</html>

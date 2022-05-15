@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let object = {
+            name: "rakesh",
+            lname: "keer"
+        }
+
+        function details(gender,age){
+            console.log(this.name, this.lname, 'and my gender is', gender, 'and i am', age, 'year old');
+
+        }
+
+        details.call(object, "male", 27);
+        details.apply(object, ["female", 29]);
+       let getdetails = details.bind(object, "male", 37);
+       getdetails();
+    </script>
+</body>
+</html>

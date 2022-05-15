@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // passby value  1st
+        // var num = 5;
+        // console.log("num before passing", num);
+        // function passByvalue(param){
+        //      param = 100;
+        //     console.log("num after passing", param);
+        // }
+        //  passByvalue(num);
+        //  console.log("num after passing", num);
+
+        //  pass by value 2nd
+
+    //     var myname = "rakesh";
+
+    //     function passByvalue2(val){
+    //         val = "rohit";
+    //         return val;
+    //     }
+    //    console.log("myname after passing = ",passByvalue2(myname));
+    //     console.log("myname = ", myname)
+
+// passbyvalue 3rd 
+var d=6;
+let a = 4;
+let b = 10;
+console.log("a before passing = ", a);
+console.log("b before passing = ", b);
+
+function passByvalue3(a,b){
+    a = a+b;
+    b = a-b;
+    a = a-b;
+console.log("a inside function passing = ", a);
+console.log("b inside function passing = ", b);
+}
+passByvalue3(a,b);
+console.log("a after function passing = ", a);
+console.log("b after function passing = ", b);
+
+        //  passBy reference 
+
+        // var obj = {
+        //     name: "rakesh",
+        //     age: 27
+        // }
+        // console.log("before passing name=", obj.name);
+        // function PassByref(name1){
+        //     name1.name = "rohit"
+        //     console.log("name1 =", obj.name);
+        // }
+
+        // PassByref(obj);
+        // console.log("name =", obj.name);
+    </script>
+</body>
+</html>
